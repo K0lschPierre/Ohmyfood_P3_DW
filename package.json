@@ -1,5 +1,19 @@
 {
-  "dependencies": {
-    "sass": "^1.54.4"
-  }
+  "name": "kolsch_pierre_p3",
+  "version": "1.0.0",
+  "description": "Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./public/css/style.scss:./public/css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K0lschPierre/P3_DW.git"
+  },
+  "author": "Pierre KÖLSCH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/K0lschPierre/P3_DW/issues"
+  },
+  "homepage": "https://github.com/K0lschPierre/P3_DW"
 }
