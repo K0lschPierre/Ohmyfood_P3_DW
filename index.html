@@ -3,17 +3,18 @@
     <head>
         <title>OhMyFood | Commande de repas en ligne</title>
         <meta charset="utf-8">
-        <meta name="author" content="Pierre KÖLSCH">
+        <meta name="author" content="KÖLSCH Pierre">
         <meta name="description" content="Site de commande de repas en ligne">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/2fdef033d0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./src/css/style.css">
         <!-- Google Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- Shrikhand Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <!-- Shrikhand Font -->  
+		<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <!-- Roboto Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <!-- Open Graph data --> 
         <meta property="og:title" content="OhMyFood | Commande de repas en ligne"/>
         <meta property="og:type" content="website"/>
@@ -30,56 +31,55 @@
         <meta name="twitter:image" content="http://www.OhMyFood.com/image.jpg">
     </head>
     <body>
+        <div class="loading"><p>Ohmyfood</p></div>
         <header>
             <div class="bloc__header">
-                <img class="bloc__header--img" alt="ohmyfood" src="./public/images/logo/ohmyfood.png"/>
+                <img class="bloc__header--img" alt="ohmyfood" src="./src/images/logo/ohmyfood.png"/>
                 <div class="bloc__header--geo">
                     <i class="fas fa-map-marker-alt"></i> <span>Paris, Belleville</span>
                 </div>
             </div>
         </header>
-        <div class="desktop">
             <div class="bloc__header--fonct">
                 <h1 class="bloc__header--title">Réservez le menu qui vous convient</h1>
-                <h2 class="bloc__header--p">Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
+                <p class="bloc__header--p">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                 <button class="bloc__header--btn" type="button" name="button">Explorer nos restaurants</button>
             </div>
             <!-- Bloc Fonction -->
             <div class="bloc__fonct">
-                <h3 class="bloc__fonct--title">Fonctionnement</h3>
+                <h2 class="bloc__fonct--title">Fonctionnement</h2>
                 <ol>
-                    <li><i class="fas fa-mobile-alt"></i> <span class="bloc__fonct--span1">Choisissez un restaurant</span></li>
-                    <li><i class="fas fa-list"></i> <span class="bloc__fonct--span2">Composez votre menu</span> </li>
-                    <li><i class="fas fa-store"></i><span class="bloc__fonct--span3">Dégustez au restaurant</span></li>
+                    <li><p class="bloc__fonct--numbers">1</p><span class="bloc__fonct--span"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</span></li>
+                    <li><p class="bloc__fonct--numbers">2</p><span class="bloc__fonct--span"><i class="fas fa-list"></i>Composez votre menu</span> </li>
+                    <li><p class="bloc__fonct--numbers">3</p><span class="bloc__fonct--span"><i class="fas fa-store"></i>Dégustez au restaurant</span></li>
                 </ol>
             </div>
-        </div>
         <!-- Card Restaurants -->
         <section>
+            <h2 class="bloc__card--title">Restaurants</h2>
             <div class="bloc__card">
-            <h3 class="bloc__card--title">Restaurants</h3>
-            <!-- Card "La palette du goût" -->
-                <a class="bloc__card--card" href="./palette.html">
+                <!-- Card "La palette du goût" -->
+                <a class="bloc__card--card" href="./palette_du_gout.html">
                     <figure class="bloc__card--figure">
                         <div class="bloc__card--new">Nouveau</div>
-                        <img class="bloc__card--img" src="./public/images/restaurants/img1.jpg" alt="La palette du goût"/>
+                        <img class="bloc__card--img" src="./src/images/restaurants/img1.jpg" alt="La palette du goût"/>
                         <figcaption class="bloc__card--figcaption">
                             <div class="bloc__card--restaurant">
-                                <h4 class="bloc__card--h4">La palette du goût</h4>
+                                <h3 class="bloc__card--h3">La palette du goût</h3>
                                 <p class="bloc__card--city">Ménilmontant</p>
                             </div>
-                            <div class="bloc-card__heart"><i class="far fa-heart"></i><i class="fas fa-heart fa-heart--hover"></i></div>
+                            <div class="bloc__card--heart"><i class="far fa-heart"></i><i class="fas fa-heart fa-heart--hover"></i></div>
                         </figcaption>
                     </figure>
                 </a>
                 <!-- Card "La note enchantée"-->
-                <a class="bloc__card--card" href="./enchantée.html">
+                <a class="bloc__card--card" href="./note_enchantee.html">
                     <figure class="bloc__card--figure">
                         <div class="bloc__card--new">Nouveau</div>
-                        <img class="bloc-card__img bloc-card__img2" src="./public/images/restaurants/img2.jpg" alt="La note enchantée"/>
+                        <img class="bloc__card--img" src="./src/images/restaurants/img2.jpg" alt="La note enchantée"/>
                         <figcaption class="bloc__card--figcaption">
                             <div class="bloc__card--restaurant">
-                                <h4 class="bloc__card--h4">La note enchantée</h4>
+                                <h3 class="bloc__card--h3">La note enchantée</h3>
                                 <p class="bloc__card--city">Charonne</p>
                             </div>
                             <div class="bloc__card--heart"><i class="far fa-heart"></i><i class="fas fa-heart fa-heart--hover"></i></div>
@@ -87,12 +87,12 @@
                     </figure>
                 </a>
                 <!-- Card "À la française" -->
-                <a class="bloc__card--card" href="./francaise.html">
+                <a class="bloc__card--card" href="./la_francaise.html">
                     <figure class="bloc__card--figure">
-                        <img class="bloc__card--img" src="./public/images/restaurants/img3.jpg" alt="À la française"/>
+                        <img class="bloc__card--img" src="./src/images/restaurants/img3.jpg" alt="À la française"/>
                         <figcaption class="bloc__card--figcaption">
                             <div class="bloc__card--restaurant">
-                                <h4 class="bloc__card--h4">A la française</h4>
+                                <h3 class="bloc__card--h3">A la française</h3>
                                 <p class="bloc__card--city">Cité Rouge</p>
                             </div>
                             <div class="bloc__card--heart"><i class="far fa-heart"></i><i class="fas fa-heart fa-heart--hover"></i></div>
@@ -100,12 +100,12 @@
                     </figure>
                 </a>
                 <!-- Card "Le délice des sens" -->
-                <a class="bloc__card--card" href="./délice.html">
+                <a class="bloc__card--card" href="./delice_des_sens.html">
                     <figure class="bloc__card--figure">
-                        <img class="bloc__card--img" src="./public/images/restaurants/img4.jpg" alt="Le délice des sens"/>
+                        <img class="bloc__card--img" src="./src/images/restaurants/img4.jpg" alt="Le délice des sens"/>
                         <figcaption class="bloc__card--figcaption">
                             <div class="bloc__card--restaurant">
-                                <h4 class="bloc__card--h4">Le délice des sens</h4>
+                                <h3 class="bloc__card--h3">Le délice des sens</h3>
                                 <p class="bloc__card--city">Folie-Méricourt</p>
                             </div>
                             <div class="bloc__card--heart"><i class="far fa-heart"></i><i class="fas fa-heart fa-heart--hover"></i></div>
@@ -117,18 +117,18 @@
         <!-- Footer -->
         <footer>
             <div class="bloc__footer">
-                <span class="bloc__footer--span">ohmyfood</span>
+                <h2 class="bloc__footer--h2">ohmyfood</h2>
                 <ul>
                     <li class="bloc__footer--li">
-                        <i class="fas fa-utensils bloc-footer__fa-utensils"></i>
-                        <p>Proposer un restaurants</p>
+                        <i class="fas fa-utensils bloc__footer--fa-utensils"></i>
+                        <a href="#">Proposer un restaurants</a>
                     </li>
                     <li class="bloc__footer--li">
-                        <i class="fas fa-hands-helping bloc-footer__fa-hands-helping"></i>
-                        <p>Devenir partenaire</p>
+                        <i class="fas fa-hands-helping bloc__footer--fa-hands-helping"></i>
+                        <a href="#">Devenir partenaire</a>
                     </li>
                     <li class="bloc__footer--li">
-                        <p>Mention légale</p>
+                        <a href="#">Mention légale</a>
                     </li>
                     <li class="bloc__footer--li">
                         <a href="mailto:ohmyfood@gmail.com">Contact</a>

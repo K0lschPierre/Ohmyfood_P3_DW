@@ -1,0 +1,43 @@
+.loading {
+    font-family: Shrikhand;
+    font-size: 4rem;
+    color: $color--white;
+    background-color: $color--footer;
+    @include flex-column ;
+    justify-content: center;
+    position: fixed;
+    height:100vh;
+    width:100%;
+    inset:0;
+    z-index:3;
+    opacity:0.99;
+    transform-origin: top;
+    animation: end 150ms 3s ease-in-out forwards;
+    &::before{
+        content:"";
+        padding:40px;
+        border:5px solid transparent; 
+        border-top: 5px solid $color--primary;
+        border-bottom: 5px solid $color--primary;
+        border-radius:100%;
+        animation: rotation 1s infinite ease-in-out;
+    }
+}
+
+@keyframes end {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes rotation{
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

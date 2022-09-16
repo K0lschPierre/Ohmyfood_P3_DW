@@ -1,0 +1,35 @@
+footer {
+    padding: 0.5rem 0rem 0.5rem 1rem;
+    color: $color--white;
+    background-color: $color--footer;
+}
+.bloc__footer {
+    &--h2 {
+        @media (min-width: 768px) {
+            text-align: center;
+        }
+    }
+    & ul {
+        list-style: none;
+        padding: 0;
+        @media (min-width:768px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+    &--li {
+        margin-bottom: 0.5rem;
+            & a {
+                text-decoration: none;
+                color: $color--white;
+            }
+    }
+    &--fa-utensils {
+        margin-right: 1rem;
+    }
+    &--fa-hands-helping {
+        margin-right: 0.6rem;
+    }
+}

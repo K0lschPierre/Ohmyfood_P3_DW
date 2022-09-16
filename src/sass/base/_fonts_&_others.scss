@@ -1,0 +1,92 @@
+html {
+	font-size: 1rem;
+	font-family: 'Roboto', serif, sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+/* INDEX */
+.bloc__header {
+	& span {
+		font-size: 1rem;
+	}
+	&--title {
+		font-size: 1.6rem;
+	}
+	&--p {
+		font-size: 1.1rem;
+	}
+	&--btn {
+		font-size: 1.1rem;
+	}
+}
+
+.bloc__fonct {
+	&--h2 {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+}
+
+.bloc__card {
+	&--card {
+		color: inherit;
+        text-decoration: none;
+	}
+	&--new {
+		font-size: 0.8rem;
+	}
+	&--h3 {
+		font-size: 1.4rem;
+		font-weight: bold;
+	}
+	& i {
+		font-weight: 100;
+	}
+}
+
+.bloc__footer {
+	&--h2 {
+		font-family: 'Shrikhand';
+		font-weight: 200;
+	}	
+}
+
+
+/* RESTAURANT */
+.bloc__title {
+	&--h1 {
+		font-family: 'Shrikhand';       
+    	font-size: 2.3rem;
+	}
+	& i {
+		font-weight: 100;
+	}
+}
+
+.menu {
+	&__title {
+		text-transform: uppercase;
+	}
+	&__liste {
+		&--h3 {
+			font-size: 1rem;
+			font-weight: bold;
+		}
+		&--p {
+			font-size: 0.8rem;
+		}
+	}
+	span {
+		font-weight: bold;
+		font-size: small;
+	}
+	&__rotate {
+		font-size: x-large;
+	}
+	&__command {
+		font-size: 0.9rem;
+	}
+}

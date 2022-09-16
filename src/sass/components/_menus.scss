@@ -1,0 +1,148 @@
+@keyframes menu-anim {
+    0% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.main {
+    z-index: 2;
+    position: relative;
+    padding-bottom: 2rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: $color--white;
+}
+
+.bloc__title {
+    @include flex-row;
+    padding-left: 20px;
+    justify-content: space-between;
+    &--h1 {
+        width: 90%;
+    }
+    & i {
+        margin-right: 1.5rem;
+        top: 45px;
+    }
+}
+
+.menu {
+    @include flex-column;
+    &__title {
+        display: flex;
+        align-self: flex-start;
+        width: 3rem;
+        margin-left: 1rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 3px solid $color--tertiary;
+    }
+    &__entrees, &__plats, &__desserts {
+        width: 80%;
+    }
+    &__bloc {
+        cursor: pointer;
+        @include flex-row;
+        border-radius: 1.2rem;
+        box-shadow: 0.2rem 0.2rem 0.5rem 0.2rem #c0c0c0;
+        padding-left: 10px;
+        width: 95%; 
+        opacity: 0;   
+        margin-bottom: 1.2rem;
+        justify-content: space-between;
+        background-color: $color--white;
+        animation: menu-anim 1400ms ease-in-out both;
+            &:nth-of-type(1){
+                animation-delay: 100ms;
+            }
+            &:nth-of-type(2) {
+                animation-delay: 500ms;
+            }
+            &:nth-of-type(3) {
+                animation-delay: 900ms;
+            }
+            &:nth-of-type(4) {
+                animation-delay: 1300ms;
+            }
+            &:nth-of-type(5) {
+                animation-delay: 1700ms;
+            }
+            &--command {
+                @include flex-row;
+                margin: 3rem;
+                @media (max-width: 500px) {
+                    margin: 2rem;
+                }
+            }
+        
+            .menu__rotate { 
+                width: 0px;
+                padding: 22px 0;
+                overflow: hidden;
+                border-radius: 0 1.2rem 1.2rem 0;
+                color: $color--white;
+                background: $color--tertiary;
+                transition-duration: 700ms;
+            }
+            &:hover .menu__rotate {
+                @include flex-row;
+                width: 70px;
+                transition-delay: 100ms;
+                transition-duration: 600ms;
+            }
+            i {
+                @include flex-row;
+                transform: rotate(0);
+            }
+            &:hover i {
+                    transform: rotate(360deg);
+                    transition-duration: 600ms;
+            }
+    }
+    &__liste {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 0.5rem;
+        &--h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin: 1rem 0 0 0;
+        }
+        &--p p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-top: 5px;
+        }
+    }
+    &__slide {
+        @include flex-row;
+        height: 4rem;
+        margin-bottom: 0;
+
+        & span {
+            display: flex;
+            align-self: flex-end;
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+        }
+
+    }
+    
+    &__command {
+        @include bouton;
+        @include flex-row;
+        @include box-shadow;
+        width: 50%;
+        max-width: 25rem;
+        padding: 1rem;
+        @media (max-width: 500px) {
+            width: 80%;
+
+        }
+    }
+}
