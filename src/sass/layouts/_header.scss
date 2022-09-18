@@ -17,9 +17,10 @@
         }
     }
     &--geo {
-        width: 95%;
+        width: 100%;
         padding: 1rem;
         background-color: $color--geo;
+        overflow: hidden;
         @include flex-row;
         @include box-shadow;
         @media (max-width: 639px) {
