@@ -17,6 +17,12 @@
     background-color: $color--white;
 }
 
+.bloc__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .bloc__title {
     @include flex-row;
     padding-left: 20px;
@@ -32,6 +38,13 @@
 
 .menu {
     @include flex-column;
+    width: 100%;
+    @media (min-width: 768px) {
+        width: 48%;
+    }
+    @media (min-width: 992px) {
+        width: 33%;
+    }
     &__title {
         display: flex;
         align-self: flex-start;
@@ -42,6 +55,9 @@
     }
     &__entrees, &__plats, &__desserts {
         width: 80%;
+        @media (min-width: 768px) {
+            width: 85%;
+        }
     }
     &__bloc {
         cursor: pointer;

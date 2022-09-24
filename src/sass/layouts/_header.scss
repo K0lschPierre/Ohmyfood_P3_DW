@@ -1,7 +1,6 @@
 /* INDEX */
 .bloc__header {
     width: 100%;
-    position: relative;
     @include flex-column;
     &--img {
         width: 30%;
@@ -31,17 +30,23 @@
         @media (max-width: 461px) {
             width: 91%;
         }
-        & span {
+        input {
             width: 150px;
             margin-left: 0.7rem;
             color: $color--black;
+            background: none;
+            height: 100%;
+            border: none;
+            outline: none;
+            font-size: 18px;
+
+            &::placeholder {
+                font-size: 18px;
+                font-weight: bold;
+            }
         }
     }
-    &--span {
-        width: 150px;
-        margin-left: 0.7rem;
-        color: $color--black;
-    }
+    
     &--fonct {
         text-align: center;
         padding: 1rem;
